@@ -47,5 +47,7 @@ Clustering coefficient of random node 320508: 0.0000
 Number of triads random node 120368 participates: 0
 Number of edges that participate in at least one triad: 21819
 ```
-For analysing any other network put its edge list file in subgraph folder
-and run python3 gen_structure.py subgraph_name.elist
+For analysing any other network put its edge list file in subgraph folder<br>
+and run python3 gen_structure.py subgraph_name.elist<br>
+<br>
+The plots generated are in the plots folder. 
