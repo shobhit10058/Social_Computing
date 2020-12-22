@@ -1,0 +1,1 @@
+This repo contains assignments done during the Social Computing Course.
