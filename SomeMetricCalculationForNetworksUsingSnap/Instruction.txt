@@ -1,0 +1,6 @@
+Name -> Shobhit Gupta
+Roll No-> 19EC10058
+Python interpreter version->Python 3.7.6
+OS-> Windows
+Run the file gen_structure.py only within 19EC10058 folder, from other folder it might give error.
+Python Libraries used-> snap, os, shutil, sys
