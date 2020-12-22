@@ -1,0 +1,12 @@
+Name -> Shobhit Gupta
+Roll No-> 19EC10058
+Python interpreter version->Python 3.7.6
+OS on which the program is tested-> Windows
+Run the file gen_centrality.py and analyze_centrality.py only within 19EC10058 folder, from other folder it might give error.
+i.e Run the files by python gen_centrality.py and python analyze_centrality.py 
+
+The estimated run time of the gen_centrality.py is 7-8 minutes. Most of the time is taken by the 
+calculation of closenessCentrality and betweenness centrality. This was calculated using the brandes algorithm
+to minimize runtime.
+
+The analyze_centrality.py runs pretty fast and executes in less than 1 minute.
