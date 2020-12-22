@@ -19,7 +19,7 @@ Rnd.Randomize()
 dirname = os.path.dirname(os.path.realpath(__file__))
 if not os.path.exists('plots'):
     os.makedirs('plots')
-G = snap.LoadEdgeList(snap.PUNGraph,dirname + "\\subgraphs\\" + sys.argv[1], 0, 1)
+G = snap.LoadEdgeList(snap.PUNGraph,os.path.join(dirname, "subgraphs", sys.argv[1]), 0, 1)
 print("Number of nodes:",G.GetNodes())
 print("Number of edges:",G.GetEdges())
 print("Number of nodes which have degree=7:",snap.CntDegNodes(G, 7))
@@ -70,13 +70,13 @@ print("Number of triads random node %d participates: %d" %(Ran_n, snap.GetNodeTr
 print("Number of edges that participate in at least one triad:",snap.GetTriadEdges(G))
 
 snap.PlotInDegDistr(G,"D_" + sys.argv[1], "Degree Distribution")
-MoveFile(dirname + "\\inDeg.D_"  + sys.argv[1] + ".png", dirname + "\\plots\\" + "deg_dist_" + sys.argv[1] + ".png")
+MoveFile(os.path.join(dirname, "inDeg.D_" + sys.argv[1] + ".png"), os.path.join(dirname, "plots", "deg_dist_" + sys.argv[1] + ".png"))
 
 snap.PlotShortPathDistr(G, "S_" + sys.argv[1], "Shortest path Distribution")
-MoveFile(dirname + "\\diam.S_" + sys.argv[1] + ".png", dirname + "\\plots\\" + "\\shortest_path_" + sys.argv[1] + ".png")
+MoveFile(os.path.join(dirname, "diam.S_" + sys.argv[1] + ".png"), os.path.join(dirname, "plots", "shortest_path_" + sys.argv[1] + ".png"))
 
 snap.PlotSccDistr(G, "C_" + sys.argv[1], "Component Size Distribution")
-MoveFile(dirname + "\\scc.C_" + sys.argv[1] + ".png", dirname + "\\plots\\" + "\\connected_comp_" + sys.argv[1] + ".png")
+MoveFile(os.path.join(dirname, "scc.C_" + sys.argv[1] + ".png"), os.path.join(dirname, "plots", "connected_comp_" + sys.argv[1] + ".png"))
 
 snap.PlotClustCf(G, "C_" + sys.argv[1], "Clustering Coefficient Distribution")
-MoveFile(dirname + "\\ccf.C_" + sys.argv[1] + ".png", dirname + "\\plots\\" + "\\clustering_coeff_" + sys.argv[1] + ".png")
+MoveFile(os.path.join(dirname, "ccf.C_" + sys.argv[1] + ".png"), os.path.join(dirname, "plots", "clustering_coeff_" + sys.argv[1] + ".png"))
